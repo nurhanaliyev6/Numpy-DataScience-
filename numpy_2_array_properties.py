@@ -7,7 +7,7 @@ import numpy as np
 #ndim
 #shape
 #size
-#dtpe
+#dtpe=
 
 random_numbers=np.random.randint(10,size=10)
 print(2*random_numbers)
@@ -83,3 +83,36 @@ print(ar)
 
 #fancy index-----------
 print("fancy_index")
+ra_num=np.arange(0,30,3)
+indexs=[0,1,2,3] #will be index of ra_num
+print(ra_num[indexs])
+
+#two dimension fancy index-------------------
+
+
+sim_arr=np.arange(9).reshape((3,3))
+print(sim_arr)
+row=np.array([0,1])
+column=np.array([1,2])
+print(sim_arr[row,column])
+print(sim_arr[0:1])
+
+#----------------------------------------
+
+sim_arr=np.array([1,2,3,4,5])
+print(sim_arr<3)
+print(sim_arr[sim_arr<3])
+
+print(sim_arr*2)
+print(np.multiply(sim_arr,2))
+#linear algebra---------------------------
+
+"""
+5*x0+x1=10
+x0+3*x1=12
+"""
+fixed=np.array([[5,1],[1,3]])
+answers=np.array([10,12])
+
+x=np.linalg.solve(fixed,answers)
+print(x)
